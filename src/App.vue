@@ -55,7 +55,7 @@ const count = ref(0);
      width: 100%;
      "
      @click="count++">{{ count }}&nbsp;</button>
-     <div style="font-size: 48px; font-weight: 900;
-     cursor: zoom-out;" @click="count--">☠️</div>
+     <button style="font-size: 48px; background-color: transparent; border: 0; font-weight: 900;
+     cursor: zoom-out;" @click="count--">☠️</button>
   </div>
 </template>
