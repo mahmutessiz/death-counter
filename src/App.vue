@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { appWindow } from "@tauri-apps/api/window";
 
 const count = ref(0);
+
+onMounted(async() => {
+  await appWindow.setAlwaysOnTop(true);
+});
 </script>
 
 <template>
