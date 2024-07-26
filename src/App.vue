@@ -1,11 +1,22 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { appWindow } from "@tauri-apps/api/window";
+import { Store } from "tauri-plugin-store-api";
 
-const count = ref(0);
+const store = new Store(".settings.dat");
+const deaths: any = ref(0);
+
 
 onMounted(async() => {
   await appWindow.setAlwaysOnTop(true);
+  const deathCount = await store.get("deaths");
+  if(deathCount) {
+    deaths.value = deathCount;
+  }else {
+    deaths.value = 0
+  }
+  console.log(deaths.value);
+  
 });
 </script>
 
@@ -52,14 +63,14 @@ onMounted(async() => {
      style="
      color: aliceblue;
      background-color: transparent;
-     font-size: 72px;
+     font-size: 48px;
      font-weight: 900;
      border: 0;
      cursor: zoom-in;
-     width: 100%;
      "
-     @click="count++">{{ count }}&nbsp;</button>
-     <button style="font-size: 48px; background-color: transparent; border: 0; font-weight: 900;
-     cursor: zoom-out;" @click="count--">☠️</button>
+     @click="async () => {await store.set('deaths', deaths + 1); deaths++; await store.save();
+     }">{{ deaths }}&nbsp;</button>
+     <button style="font-size: 44px; background-color: transparent; border: 0; font-weight: 900;
+     cursor: zoom-out;" @click="async () => {await store.set('deaths', deaths - 1); deaths--; await store.save();}">☠️</button>
   </div>
 </template>
