@@ -1,3 +1,9 @@
+![alt text](http://url/to/img.png](https://raw.githubusercontent.com/mahmutessiz/death-counter/main/public/1.png)
+
+
+![alt text](http://url/to/img.png](https://raw.githubusercontent.com/mahmutessiz/death-counter/main/public/2.png)
+
+
 # Tauri + Vue + TypeScript
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
