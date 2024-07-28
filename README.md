@@ -1,4 +1,4 @@
-![alt text](http://url/to/img.png](https://raw.githubusercontent.com/mahmutessiz/death-counter/main/public/1.png)
+![alt text](1.png)
 
 
 ![alt text](http://url/to/img.png](https://raw.githubusercontent.com/mahmutessiz/death-counter/main/public/2.png)
