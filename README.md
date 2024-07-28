@@ -1,7 +1,7 @@
-![alt text](1.png)
+![alt text](public/1.png)
 
 
-![alt text](http://url/to/img.png](https://raw.githubusercontent.com/mahmutessiz/death-counter/main/public/2.png)
+![alt text](public/2.png)
 
 
 # Tauri + Vue + TypeScript
