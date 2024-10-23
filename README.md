@@ -3,6 +3,8 @@
 
 ![alt text](public/2.png)
 
+## Note
+When using this on linux Wayland does not have an api for alwaysOnTop functionality. So this app won't stay on top on Wayland Linux setup.
 
 # Tauri + Vue + TypeScript
 
